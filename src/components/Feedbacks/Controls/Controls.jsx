@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
-import s from './Controls.module.css'
+import {ButtonList, Button} from './Controls.styled'
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     return (
         (options.map((option, index)=> {
             return (
-                <div className={s.buttonList} key={index}>
-                    <button type="button" className={s.button} name={option} onClick={onLeaveFeedback}> {option}</button>
-                </div>
+                <ButtonList key={index}>
+                    <Button type="button" name={option} onClick={onLeaveFeedback}> {option}</Button>
+                </ButtonList>
             )
         }))
     )

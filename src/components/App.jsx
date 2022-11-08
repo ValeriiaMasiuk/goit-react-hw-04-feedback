@@ -13,7 +13,6 @@ function App() {
 
   const { good, neutral, bad } = state;
 
-
     const onLeaveFeedback = (evt) => {
       const name = evt.currentTarget.name;
 

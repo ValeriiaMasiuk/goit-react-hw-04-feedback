@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-import s from './Section.module.css';
+import {Wrapper, SectionHeader} from './Section.styled'
 
 const Section = ({title, children}) => {
         return (
-        <div className={s.wrapper}>
-            <h1 className={s.sectionHeader}>{title}</h1>
+        <Wrapper>
+            <SectionHeader>{title}</SectionHeader>
             {children}
-        </div>
+        </Wrapper>
         )
 }
 
