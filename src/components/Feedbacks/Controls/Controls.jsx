@@ -5,9 +5,9 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     return (
         (options.map((option, index)=> {
             return (
-                <div className={s.buttonList}>
-                    <button type="button" className={s.button} key={index} name={option} onClick={onLeaveFeedback}> {option}</button>
-                    </div>
+                <div className={s.buttonList} key={index}>
+                    <button type="button" className={s.button} name={option} onClick={onLeaveFeedback}> {option}</button>
+                </div>
             )
         }))
     )
@@ -17,5 +17,5 @@ export default FeedbackOptions
 
 FeedbackOptions.propTypes = {
     option: PropTypes.string,
-    index: PropTypes.number
+    index: PropTypes.number,
 }
